@@ -64,7 +64,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_edit_text"
-                        android:hint="Tìm kiếm"
+                        android:hint="Search"
                         android:padding="5dp"
                         android:paddingStart="15dp"
                         android:textAlignment="textStart" />
