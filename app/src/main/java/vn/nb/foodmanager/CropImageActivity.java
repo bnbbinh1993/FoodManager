@@ -123,7 +123,8 @@ public class CropImageActivity extends AppCompatActivity {
                     return;
                 }
                 try {
-                    File f = new File(getCacheDir(), "cropped.jpg");
+                  //  File f = new File(getCacheDir(), "cropped.jpg");
+                    File f = createImageFile();
                     ByteArrayOutputStream bos = new ByteArrayOutputStream();
                     cropped.compress(Bitmap.CompressFormat.JPEG, maxQuality, bos);
                     byte[] bitmapData = bos.toByteArray();

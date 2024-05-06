@@ -34,7 +34,7 @@ public interface FoodDao {
     List<FoodWithCategory> getAllFoodWithCategory();
 
     @Transaction
-    @Query("SELECT Food.*, Category.* FROM Food LEFT JOIN Category ON Food.category_Id = Category.categoryId AND Category.categoryDeleted = 0 WHERE Food.foodDeleted = 0 AND Food.foodPrice BETWEEN 100000 AND 200000 AND Food.foodServiceTime > :currentTimePlus15Minutes")
+    @Query("SELECT Food.*, Category.* FROM Food LEFT JOIN Category ON Food.category_Id = Category.categoryId AND Category.categoryDeleted = 0 WHERE Food.foodDeleted = 0 AND Food.foodPrice BETWEEN 100000 AND 200000 AND Food.foodServiceTime < :currentTimePlus15Minutes")
     List<FoodWithCategory> getFoodWithinPriceAndServiceTimeGreaterThanCurrentTime(long currentTimePlus15Minutes);
 
 

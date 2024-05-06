@@ -127,6 +127,8 @@ public class NewFoodActivity extends AppCompatActivity {
                 database.foodDao().update(food);
             }
 
+            Log.d("___haha", "onCreate: "+path);
+
 
             Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
             setResult(Activity.RESULT_OK, intent);
